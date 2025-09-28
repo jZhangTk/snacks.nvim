@@ -348,7 +348,7 @@ function M.hover()
   end
 
   if hover and (not hover.win:valid() or hover.buf ~= current_buf or vim.fn.mode() ~= "n") then
-    M.hover_close()
+    return M.hover_close()
   end
 
   M.at_cursor(function(src)
